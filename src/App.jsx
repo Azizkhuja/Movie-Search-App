@@ -8,6 +8,7 @@ import Spinner from "./components/Spinner";
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
   const [mainState, setMainState] = useState({
     s: "",
     results: [],
@@ -18,15 +19,28 @@ function App() {
   const search = (e) => {
     if (e.key === "Enter") {
       setIsLoading(true);
-      axios(apiUrl + "&s=" + mainState.s).then(({ data }) => {
-        let results = data.Search;
-        setIsLoading(false);
-        setMainState((prevState) => {
-          return { ...prevState, results: results };
+      axios(apiUrl + "&s=" + mainState.s)
+        .then(({ data }) => {
+          let results = data.Search;
+          setIsLoading(false);
+          setMainState((prevState) => {
+            return { ...prevState, results: results };
+          });
+        })
+        .catch((err) => {
+          setIsLoading(false);
+          setError(err.response.data.Error);
         });
-      });
     }
   };
+
+  // const handleErrors = (err) => {
+  //   if (err.response) {
+  //     console.log("Problem with response");
+  //   } else {
+  //     console.log("Error", err.message);
+  //   }
+  // };
 
   const handleInput = (e) => {
     let s = e.target.value;
@@ -64,6 +78,11 @@ function App() {
           <Spinner />
         ) : (
           <Results results={mainState.results} openPopup={openPopup} />
+        )}
+        {error && (
+          <div className="error">
+            <h2>{error}</h2>
+          </div>
         )}
 
         {typeof mainState.selected.Title != "undefined" ? (

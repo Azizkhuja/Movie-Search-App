@@ -178,6 +178,16 @@ section {
   -webkit-animation: spin 2s linear infinite; /* Safari */
   animation: spin 2s linear infinite;
 }
+/* Error */
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.error h2 {
+  font-size: 30px;
+  color: #fff;
+}
 /* Safari */
 @-webkit-keyframes spin {
   0% {
