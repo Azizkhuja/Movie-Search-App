@@ -10,7 +10,7 @@ const Popup = ({ selected, closePopup }) => {
         <p className="rating">Rating: {selected.imdbRating}</p>
         <div className="plot">
           <img src={selected.Poster} />
-          {/* <p>{selected.Plot}</p> */}
+
           <ul className="plot__list">
             <li>
               <span>Actors:</span> {selected.Actors}
@@ -32,11 +32,22 @@ const Popup = ({ selected, closePopup }) => {
             </li>
           </ul>
         </div>
+        <div className="plot__info">
+          <p>{selected.Plot}</p>
+          <hr />
+        </div>
 
         <br />
         <button className="close" onClick={closePopup}>
           Close
         </button>
+        <a
+          className="plot__info--btn"
+          href={`https://www.imdb.com/title/${selected.imdbID}`}
+          target="_blank"
+        >
+          View iMDB
+        </a>
       </div>
     </section>
   );

@@ -146,11 +146,19 @@ section {
   font-weight: bold;
 }
 
+.plot__info--btn {
+  padding: 15px 20px;
+  margin-left: 5px;
+  background: #f0ba26;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
 .popup .content .close {
   display: inline-block;
   padding: 15px 30px;
   font-size: 18px;
-  font-weight: 700;
 
   background: #4484c4;
   color: #fff;
