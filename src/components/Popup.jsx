@@ -10,16 +10,28 @@ const Popup = ({ selected, closePopup }) => {
         <p className="rating">Rating: {selected.imdbRating}</p>
         <div className="plot">
           <img src={selected.Poster} />
-          <p>{selected.Plot}</p>
+          {/* <p>{selected.Plot}</p> */}
+          <ul className="plot__list">
+            <li>
+              <span>Actors:</span> {selected.Actors}
+            </li>
+            <li>
+              <span>Awards:</span> {selected.Awards}
+            </li>
+            <li>
+              <span>Revenue:</span> {selected.BoxOffice}
+            </li>
+            <li>
+              <span>Genre:</span> {selected.Genre}
+            </li>
+            <li>
+              <span>Language:</span> {selected.Language}
+            </li>
+            <li>
+              <span>Length:</span> {selected.Runtime}
+            </li>
+          </ul>
         </div>
-        <ul>
-          <li>Actors: {selected.Actors}</li>
-          <li>Awards: {selected.Awards}</li>
-          <li>Revenue: {selected.BoxOffice}</li>
-          <li>Genre: {selected.Genre}</li>
-          <li>Language: {selected.Language}</li>
-          <li>Length: {selected.Runtime}</li>
-        </ul>
 
         <br />
         <button className="close" onClick={closePopup}>

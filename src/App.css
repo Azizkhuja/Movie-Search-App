@@ -6,7 +6,7 @@
 
 body {
   font-family: "montserrat", sans-serif;
-  background-color: #223343;
+  background-color: #283747;
 }
 
 header {
@@ -133,10 +133,17 @@ section {
   max-width: 300px;
   padding: 0px 15px;
 }
-
-.popup .content .plot p {
-  flex: 1 1 50%;
-  padding: 15px;
+.plot__list {
+  list-style-type: none;
+}
+.plot__list li {
+  font-size: 20px;
+  margin: 20px 0;
+  border-bottom: 2px solid #fff;
+  font-weight: lighter;
+}
+.plot__list li span {
+  font-weight: bold;
 }
 
 .popup .content .close {
@@ -213,5 +220,13 @@ section {
   }
   .spinner h1 {
     font-size: 40px;
+  }
+  .plot__list li {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 748px) {
+  section.results {
+    justify-content: center;
   }
 }

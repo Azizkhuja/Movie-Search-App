@@ -34,14 +34,6 @@ function App() {
     }
   };
 
-  // const handleErrors = (err) => {
-  //   if (err.response) {
-  //     console.log("Problem with response");
-  //   } else {
-  //     console.log("Error", err.message);
-  //   }
-  // };
-
   const handleInput = (e) => {
     let s = e.target.value;
 
@@ -69,7 +61,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>Movie App</h1>
+        <h1>Movie Info</h1>
       </header>
       <main>
         <Search handleInput={handleInput} search={search} />
