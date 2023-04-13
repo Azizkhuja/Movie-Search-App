@@ -1,5 +1,6 @@
 # Movie-Search-App
 [Demo Link](https://movie-infos-search.netlify.app/)
+
 ![Screenshot](image.png)
 
 ### In this application I have used `React.js`, `Vite.js`, `axios`, `OMDb API` and Pure `CSS`(without any 3rd party frameworks). 
