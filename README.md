@@ -1,4 +1,4 @@
-# Movie-Search-App
+# Movie Search App
 [Demo Link](https://movie-infos-search.netlify.app/)
 
 ![Screenshot](image.png)
